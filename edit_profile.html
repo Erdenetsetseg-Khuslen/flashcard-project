@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+    {% load static %}
+</head>
+<body>
+
+<h2>Edit Profile Image</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Save</button>
+</form>
+
+<br>
+<a href="{% url 'account' %}">← Back to My Account</a>
+
+</body>
+</html>
